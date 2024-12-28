@@ -12,7 +12,7 @@ $mail = new PHPMailer();
 
 // Configura el servidor SMTP
 $mail->isSMTP();
-$mail->Host = '192.168.224.129';
+$mail->Host = '127.0.0.1';
 $mail->Port = 25;
 
 //Evitar error SSL o TLS
@@ -37,6 +37,7 @@ $toNombre = 'Juan Romero Segurihack';
 
 //Para
 $para = 'test-hqoe384y1@srv1.mail-tester.com';
+$para = 'smtp+u67kkfgdbyheph8x@mailtester.smtpserver.com';
 $paraNombre = 'Juan Romero Destino';
 
 // Configura el remitente y el destinatario
