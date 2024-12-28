@@ -33,7 +33,7 @@ $toNombre = 'Juan Romero Segurihack';
 
 //Para
 $para = 'test-hqoe384y1@srv1.mail-tester.com';
-paraNombre = 'Juan Romero Destino';
+$paraNombre = 'Juan Romero Destino';
 
 // Configura el remitente y el destinatario
 $mail->setFrom($to, $toNombre);

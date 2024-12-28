@@ -93,9 +93,10 @@ apt install postfix mailutils php curl net-tools opendkim opendkim-tools
 		
 --- Pruebas:
 
-		https://www.mail-tester.com/
+		https://www.mail-tester.com/ : test-hqoe384y1@srv1.mail-tester.com
 		
-		echo "Postfix test" | mail -s "Subject" test-hqoe384y1@srv1.mail-tester.com
+		git clone https://github.com/karlitoxz/SetupPostfix.git
+		
 			tail -n 30 /var/log/postfix.log
 				cat /var/log/postfix.log | grep D259CC03F4
 				
