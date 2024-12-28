@@ -1,0 +1,39 @@
+;;
+;; Domain:     segurihack.lat.
+;; Exported:   2024-12-28 18:23:40
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+segurihack.lat	3600	IN	SOA	amanda.ns.cloudflare.com. dns.cloudflare.com. 2048707682 10000 2400 604800 3600
+
+;; NS Records
+segurihack.lat.	86400	IN	NS	amanda.ns.cloudflare.com.
+segurihack.lat.	86400	IN	NS	piotr.ns.cloudflare.com.
+
+;; A Records
+mail.segurihack.lat.	1	IN	A	186.144.234.61 ; error mail.segurihack.lat is not assigned to a server
+
+;; TXT Records
+_dmarc.segurihack.lat.	1	IN	TXT	"v=DMARC1; p=quarantine;rua=mailto:webmaster@segurihack.lat;adkim=r;aspf=r" ; Dmarc de segurihack.lat
+segurihack._domainkey.segurihack.lat.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyt5Q4SrnUpQnxQHOQ0Vv4tjP4S8au+0qoxCxs/uZEpq0cFJbdsP1+lBkHc/dj0wy400MsgjyJ3V6ARRA19ON4v9d2nCLxNOFxT37c0SoguNaAuE3ozZCSgFU3FTv2UDeMVWYCtnvMydRIeiPfo4EuRBARw50GqVN7O/hr0oajXbCkZfGbIBt1rc" "euAYGgY3nk/4KSp8x+Hzkbb03WROE08uOOAmYJbnf9Py+cullJizob0GxYnoViIYwBzBWAQi5cgUP0trAYjaqdX8Da0lDiaAj4YYAn+cku5VrAM9DsCI+HaO3xNqE7Ny5QjKfX5CAeHEHChaxN22mMYwCTjfcxwIDAQAB" ; Lllave DKIM /etc/opendkim/keys/segurihack.lat/segurihack.txt
+segurihack.lat.	1	IN	TXT	"v=spf1 ip4:186.144.234.61 ~all" ; Registro spf con la direcion ip publica actual
