@@ -28,7 +28,7 @@ $mail->SMTPAuth = false; // Si el servidor SMTP requiere autenticación, cambia 
 $mail->SMTPSecure = 'tsl'; // Si el servidor SMTP requiere conexión segura (TLS/SSL), cambia esto a 'tls' o 'ssl'
 
 //Debug
-$email->SMTPDebug = true;
+$mail->SMTPDebug = true;
 $mail->SMTPDebug = 4;
 
 //De:
