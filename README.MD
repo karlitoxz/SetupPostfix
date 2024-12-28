@@ -89,7 +89,8 @@ apt install postfix mailutils php curl net-tools opendkim opendkim-tools
 						?all: Es una política neutral. No indica específicamente si el correo debe ser aceptado o rechazado, solo permite que el servidor receptor tome su propia decisión.
 				dig txt segurihack.lat
 				https://mxtoolbox.com/SuperTool.aspx?action=spf%3asegurihack.lat&run=toolpage
-					
+		-MX:
+			A mail 186.144.234.61
 		
 --- Pruebas:
 
@@ -100,6 +101,21 @@ apt install postfix mailutils php curl net-tools opendkim opendkim-tools
 		
 			tail -n 30 /var/log/postfix.log
 				cat /var/log/postfix.log | grep D259CC03F4
+				
+		php sendMail.php
+		
+
+---  RDNS mismatched se ajusta RDNS, pero se daña el score por que no existe registro A con la ip de ese servidor.
+
+https://www.ipchicken.com/
+	nano /etc/postfix/main.cf
+		myhostname = dynamic-ip-18614423461.cable.net.co
+	systemctl restart postfix
+	systemctl reload postfix
+	
+	
+		
+		
 				
 
 	
