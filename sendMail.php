@@ -27,6 +27,10 @@ $mail->SMTPOptions = array(
 $mail->SMTPAuth = false; // Si el servidor SMTP requiere autenticación, cambia esto a true
 $mail->SMTPSecure = 'tsl'; // Si el servidor SMTP requiere conexión segura (TLS/SSL), cambia esto a 'tls' o 'ssl'
 
+//Debug
+$email->SMTPDebug = true;
+$mail->SMTPDebug = 4;
+
 //De:
 $to = 'info@segurihack.lat';
 $toNombre = 'Juan Romero Segurihack';
