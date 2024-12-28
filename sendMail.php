@@ -12,7 +12,7 @@ $mail = new PHPMailer();
 
 // Configura el servidor SMTP
 $mail->isSMTP();
-$mail->Host = '127.0.0.1';
+$mail->Host = '192.168.224.129';
 $mail->Port = 25;
 
 //Evitar error SSL o TLS
