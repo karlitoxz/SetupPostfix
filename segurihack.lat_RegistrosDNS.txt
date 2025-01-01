@@ -1,6 +1,6 @@
 ;;
 ;; Domain:     segurihack.lat.
-;; Exported:   2024-12-28 18:23:40
+;; Exported:   2025-01-01 19:41:25
 ;;
 ;; This file is intended for use for informational and archival
 ;; purposes ONLY and MUST be edited before use on a production
@@ -24,16 +24,19 @@
 ;;
 ;; Use at your own risk.
 ;; SOA Record
-segurihack.lat	3600	IN	SOA	amanda.ns.cloudflare.com. dns.cloudflare.com. 2048707682 10000 2400 604800 3600
+segurihack.lat	3600	IN	SOA	amanda.ns.cloudflare.com. dns.cloudflare.com. 2048742708 10000 2400 604800 3600
 
 ;; NS Records
 segurihack.lat.	86400	IN	NS	amanda.ns.cloudflare.com.
 segurihack.lat.	86400	IN	NS	piotr.ns.cloudflare.com.
 
 ;; A Records
-mail.segurihack.lat.	1	IN	A	186.144.234.61 ; error mail.segurihack.lat is not assigned to a server
+mail.segurihack.lat.	1	IN	A	186.144.234.61
+
+;; MX Records
+segurihack.lat.	1	IN	MX	10 mail.segurihack.lat.
 
 ;; TXT Records
-_dmarc.segurihack.lat.	1	IN	TXT	"v=DMARC1; p=quarantine;rua=mailto:webmaster@segurihack.lat;adkim=r;aspf=r" ; Dmarc de segurihack.lat
-segurihack._domainkey.segurihack.lat.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyt5Q4SrnUpQnxQHOQ0Vv4tjP4S8au+0qoxCxs/uZEpq0cFJbdsP1+lBkHc/dj0wy400MsgjyJ3V6ARRA19ON4v9d2nCLxNOFxT37c0SoguNaAuE3ozZCSgFU3FTv2UDeMVWYCtnvMydRIeiPfo4EuRBARw50GqVN7O/hr0oajXbCkZfGbIBt1rc" "euAYGgY3nk/4KSp8x+Hzkbb03WROE08uOOAmYJbnf9Py+cullJizob0GxYnoViIYwBzBWAQi5cgUP0trAYjaqdX8Da0lDiaAj4YYAn+cku5VrAM9DsCI+HaO3xNqE7Ny5QjKfX5CAeHEHChaxN22mMYwCTjfcxwIDAQAB" ; Lllave DKIM /etc/opendkim/keys/segurihack.lat/segurihack.txt
-segurihack.lat.	1	IN	TXT	"v=spf1 ip4:186.144.234.61 ~all" ; Registro spf con la direcion ip publica actual
+_dmarc.segurihack.lat.	1	IN	TXT	"v=DMARC1; p=quarantine;rua=mailto:webmaster@segurihack.lat;adkim=r;aspf=r"
+segurihack._domainkey.segurihack.lat.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvnGl/vrPjDs2eRhAnVGtJg8h15oUHexErE+9DlCxLKgCr4Mm/tk+vflVCJgk/+Nm1rWzDiyDIy9TrjEUUVUQi48h2EKKy818oGaiAybac36dQ/BVW5x01ZUXGeddgAB4nskA7mRWj534ANPYO7zrw+Va84R0OVNCnn2xXI5CG384mj0F0PXjdco" "+NfHyTf/11nIyrfLMHpAoM4wZLpN0hOVGGW/JaLySj15kNiw7jUE/+ajohEaWB+oP68vwZ2XXnX9eFvRvpxI2M32OjwcVL+5oT/lBDpbQgL+JnQ9LRY59EwsYbuKgvs2Pu2XryAfdQoMD4+SD4sONrolHpTwmGwIDAQAB"
+segurihack.lat.	1	IN	TXT	"v=spf1 ip4:186.144.234.61 ~all"
